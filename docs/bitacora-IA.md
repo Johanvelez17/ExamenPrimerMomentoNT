@@ -1,6 +1,6 @@
-# 📘 Bitácora de IA - Proyecto Examen Primer Momento
+# Bitácora de IA - Proyecto Examen Primer Momento
 
-## 💡 ¿Cómo se usó ChatGPT en este proyecto?
+## ¿Cómo se usó ChatGPT en este proyecto?
 
 ### Durante el desarrollo de este proyecto se utilizó ChatGPT como asistente para:
 
@@ -139,5 +139,5 @@ También se nos recordó la importancia de mantener la documentación consistent
 #### Nota: (Aquí nos sugería que borraramos las ramas de reporte, estadistica y a de ingesta-datos para un manejo más limpio en el repositorio donde unicamente tuvieramos la rama main y opcional la rama dev pero decidimos dejarlas todas para tener la trazabilidad de lo desarrollado de una manera mas visual)
 
 
-### AL final le pedimos que nos trajera todos los prompt utilizados en una pequeña lista y es lo que documentamos hasta aquí.
+### Al final le pedimos que nos trajera todos los prompt utilizados en una pequeña lista y es lo que documentamos hasta aquí.
 
