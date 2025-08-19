@@ -9,19 +9,19 @@ def cargar_compras(ruta):
     lector = csv.DictReader(archivo)
 
     for fila in lector:
-        # Limpiar claves y valores
+        
         fila_limpia = {}
         for clave in fila:
             clave_limpia = clave.strip()
             valor_limpio = fila[clave].strip()
             fila_limpia[clave_limpia] = valor_limpio
 
-        # Extraer valores
+        
         cantidad = int(fila_limpia["cantidad"])
         precio = int(fila_limpia["precio_unitario"])
         fecha = fila_limpia["fecha"]
 
-        # Validaciones
+        
         if cantidad > 0 and precio > 0:
             if len(fecha) == 10 and fecha[4] == "-" and fecha[7] == "-":
                 compras_validas.append(fila_limpia)
@@ -48,19 +48,19 @@ def estadisticas(data):
         ingreso = cantidad * precio
         total_ingresos += ingreso
 
-        # Ingresos por producto
+        
         if producto in ingresos_por_producto:
             ingresos_por_producto[producto] += ingreso
         else:
             ingresos_por_producto[producto] = ingreso
 
-        # Cantidad por cliente
+        
         if cliente in compras_por_cliente:
             compras_por_cliente[cliente] += cantidad
         else:
             compras_por_cliente[cliente] = cantidad
 
-    # Producto top por ingresos
+    
     max_ingresos = 0
     top_producto = ""
     for producto in ingresos_por_producto:
@@ -81,7 +81,7 @@ def estadisticas(data):
 
     return resumen
 
-
+# Funcion para generar el reporte en formato JSON
 def generar_reporte(resumen, ruta_salida):
     if resumen["bono"] == True:
         resumen["mensaje"] = "Umbral superado, aplicar descuento corporativo 5% en próxima compra"
