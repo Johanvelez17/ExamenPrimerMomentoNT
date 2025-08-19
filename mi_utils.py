@@ -2,7 +2,9 @@ import csv
 import json
 from datetime import datetime
 
+
 # Función para consumir el archivo .csv 
+
 def cargar_compras(ruta):
     compras_validas = []
 
@@ -83,6 +85,8 @@ def estadisticas(data):
     return resumen
 
 
+# Funcion para generar el reporte en formato JSON
+
 def generar_reporte(resumen, ruta_salida):
     if resumen["bono"] == True:
         resumen["mensaje"] = "Umbral superado, aplicar descuento corporativo 5% en próxima compra"
@@ -91,3 +95,4 @@ def generar_reporte(resumen, ruta_salida):
     texto_json = json.dumps(resumen, indent=4, ensure_ascii=False)
     archivo.write(texto_json)
     archivo.close()
+
