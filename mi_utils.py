@@ -2,6 +2,12 @@ import csv
 import json
 from datetime import datetime
 
+<<<<<<< HEAD
+
+# Función para consumir el archivo .csv 
+
+=======
+>>>>>>> feature/estadisticas
 def cargar_compras(ruta):
     compras_validas = []
 
@@ -33,7 +39,11 @@ def cargar_compras(ruta):
     archivo.close()
     return compras_validas
 
+<<<<<<< HEAD
+
+=======
 # Función que gestiona internamente las operaciones para las estadisticas
+>>>>>>> feature/estadisticas
 def estadisticas(data):
     total_ingresos = 0
     ingresos_por_producto = {}
@@ -60,6 +70,10 @@ def estadisticas(data):
         else:
             compras_por_cliente[cliente] = cantidad
 
+<<<<<<< HEAD
+    
+=======
+>>>>>>> feature/estadisticas
     max_ingresos = 0
     top_producto = ""
     for producto in ingresos_por_producto:
@@ -81,6 +95,11 @@ def estadisticas(data):
     return resumen
 
 
+<<<<<<< HEAD
+# Funcion para generar el reporte en formato JSON
+
+=======
+>>>>>>> feature/estadisticas
 def generar_reporte(resumen, ruta_salida):
     if resumen["bono"] == True:
         resumen["mensaje"] = "Umbral superado, aplicar descuento corporativo 5% en próxima compra"
